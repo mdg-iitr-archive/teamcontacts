@@ -36,13 +36,6 @@ public class firstsheet extends Activity {
 	HashMap<String, List<String>> listDataChild;
 
 	@Override
-	public void onBackPressed() {
-		Intent i = new Intent(firstsheet.this, spreadsheeets.class);
-		finish();
-		startActivity(i);
-	}
-
-	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -52,7 +45,7 @@ public class firstsheet extends Activity {
 		tv.setText(title);
 		database1 db = new database1(firstsheet.this);
 		db.open();
-		int p = db.getCount1();
+		int p = db.getCount0();
 		if (p == 0) {
 			LayoutInflater li = LayoutInflater.from(this);
 			View dialogview = li.inflate(R.layout.dialognew, null);
@@ -96,6 +89,12 @@ public class firstsheet extends Activity {
 							});
 			AlertDialog alertDialog = alertDialogBuilder.create();
 			alertDialog.show();
+		} else if (db.getCount1() == 0) {
+			Toast.makeText(this, "No spreadsheet selected. Select one.",
+					Toast.LENGTH_SHORT).show();
+			Intent i = new Intent(firstsheet.this, spreadsheeets.class);
+			finish();
+			startActivity(i);
 		}
 
 		expListView = (ExpandableListView) findViewById(R.id.lvExp);
@@ -269,6 +268,7 @@ public class firstsheet extends Activity {
 			help.show();
 			break;
 		}
+
 		case R.id.changecolumn: {
 			LayoutInflater li = LayoutInflater.from(this);
 			View dialogview = li.inflate(R.layout.dialog_column, null);
@@ -320,6 +320,12 @@ public class firstsheet extends Activity {
 			AlertDialog alertDialog = alertDialogBuilder.create();
 			alertDialog.show();
 
+			break;
+		}
+		case R.id.sprdsheets: {
+			Intent i = new Intent(firstsheet.this, spreadsheeets.class);
+			finish();
+			startActivity(i);
 			break;
 		}
 		default:

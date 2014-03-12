@@ -45,10 +45,10 @@ public final class R {
         public static final int wall=0x7f020015;
     }
     public static final class id {
-        public static final int action_settings=0x7f080011;
-        public static final int button1=0x7f08000f;
+        public static final int action_settings=0x7f080012;
+        public static final int button1=0x7f080010;
         public static final int call=0x7f080006;
-        public static final int changecolumn=0x7f08000d;
+        public static final int changecolumn=0x7f08000e;
         public static final int contactimport=0x7f08000c;
         public static final int editText1=0x7f080002;
         public static final int editText2=0x7f080003;
@@ -59,9 +59,10 @@ public final class R {
         public static final int massemail=0x7f08000b;
         public static final int msg=0x7f080005;
         public static final int myEditText=0x7f080007;
-        public static final int notifie=0x7f08000e;
-        public static final int privatelist=0x7f080010;
+        public static final int notifie=0x7f08000f;
+        public static final int privatelist=0x7f080011;
         public static final int settings=0x7f08000a;
+        public static final int sprdsheets=0x7f08000d;
         public static final int textView1=0x7f080000;
     }
     public static final class layout {

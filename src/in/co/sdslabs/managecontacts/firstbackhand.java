@@ -51,8 +51,9 @@ public class firstbackhand {
 		protected void onPreExecute() {
 			// TODO Auto-generated method stub
 			super.onPreExecute();
-			mProgressDialog = ProgressDialog.show(context, "Update:",
-					"Please wait while the app is updating.", true);
+			mProgressDialog = ProgressDialog.show(context, "List:",
+					"Please wait while the list of spreadsheets is fetched.",
+					true);
 			mProgressDialog.setCancelable(true);
 		}
 
